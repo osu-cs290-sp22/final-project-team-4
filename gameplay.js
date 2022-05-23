@@ -12,6 +12,11 @@ var health = 9999
 var game_paused = false
 var window_focused = true
 
+var homeButton = document.getElementById('home-button')
+
+homeButton.addEventListener('click', function(){
+    window.location.href='./index.html'
+})
 
 //draws score in top right
 
@@ -96,7 +101,7 @@ pause_button.addEventListener('click', toggle_game_paused)
 function toggle_game_paused() {
     if (game_paused) {
         game_paused = false
-        document.getElementById('game_paused_screen').classList.add('hidden')
+        document.getElementById('game_paused_screen').classList.add('hidden') 
         document.querySelector(".play-pause-img").src = "./images/pause_white.png"
     } else {
         game_paused = true
